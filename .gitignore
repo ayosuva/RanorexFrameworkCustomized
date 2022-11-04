@@ -1,0 +1,10 @@
+*bin/
+*obj/
+*Reports/
+*.rxlog
+*.rxuser
+# Ranorex Specific files
+[Rr]eports
+*.rxlog.data
+*.rxuser
+*.pref
