@@ -1,0 +1,90 @@
+﻿<repository
+id="9aaf6914-2d20-4b0c-96b2-28a413c04ba7"
+name="YosuvaComRepository">
+	<codegen
+	classname="YosuvaComRepository"
+	namespace="YosuvaCom">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="3990b755-f4de-48a6-807b-46224209af53"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		addcaps="container,webdocument"
+		capname="webdocument"
+		id="7a09804a-447b-47c8-a1bc-5ff78f4728ca"
+		isrooted="True"
+		name="YosuvaCom"
+		searchtimeout="30000ms"
+		usecache="False">
+			<item
+			addcaps="unknown,webelement,inputtag"
+			capname="inputtag"
+			id="febadc77-14bf-46ab-a087-89b4ca494b7e"
+			name="First_Name"
+			refimgid="10330b54-2ec3-453e-a960-27e9753bd77d"
+			refpath="/dom[@domain='yosuva.com']//input[#'fname']"
+			robustPath=""
+			searchtimeout="30000ms">
+				/dom[@domain='yosuva.com']//input[#'fname']
+			</item>
+			<item
+			addcaps="unknown,webelement,inputtag"
+			capname="inputtag"
+			id="3b64d4c0-75aa-4dc9-adff-b73dfb5eba3c"
+			name="Last_Name"
+			refimgid="4441a643-fd0c-4a9b-8a9d-0fb902162bcf"
+			refpath="/dom[@domain='yosuva.com']//input[#'lname']"
+			robustPath=""
+			searchtimeout="30000ms">
+				/dom[@domain='yosuva.com']//input[#'lname']
+			</item>
+			<item
+			addcaps="unknown,webelement,inputtag"
+			capname="inputtag"
+			id="d2ea2f2e-50ce-4ff5-b0cc-8c5f59644170"
+			name="Submit"
+			refimgid="4b4e2fa8-3843-4b89-af03-065ac169a246"
+			robustPath=""
+			searchtimeout="30000ms">
+				/dom[@domain='yosuva.com']//input[@type='submit']
+			</item>
+			<item
+			addcaps="unknown,webelement,ptag"
+			capname="ptag"
+			id="79a6d9ce-0d87-407c-832a-01d65d4abfd1"
+			name="Welcome_Msg"
+			refimgid="ed6a5843-278d-44ea-8cc7-394360e8a2f4"
+			refpath="/dom[@domain='yosuva.com']//div[#'top']/header/div[1]/div/p[@innertext='Share what you Learned !!! Happy Learning !!!']"
+			robustPath=""
+			searchtimeout="30000ms">
+				/dom[@domain='yosuva.com']//div[#'top']/header//p[@innertext&gt;'Share what you Learned !!!']
+			</item>
+			<basepath>
+				/dom[@domain='yosuva.com']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGHRFWHRTb2Z0d2FyZQBQYWlu
+dC5ORVQgdjMuMzE3g3eGAAACKklEQVQ4T43R20vTcRjHcS/6G4Kgyy6KKKjwJogIDBJjIBUt2YVD
+yoGVmWUWzozMC92YaWqeSE1s0dThOtjBWUlKkMxDudXU1lCU6XSepzu82+/nvNrX6APP1e95Xt/f
+9/vEbaWh7TO1xi4qmjspfWKhuLqN++VGtLqn5BTVk1lQRbRVHGn4X8nTNclYtD020smBYDjaHhsJ
+cIxPbY8YIr+9viEGgqGwDBxLvixXfGJaLCLdedUfCwRDyPDKWoiF5SAuT0AMSA+2BXhXZqmydFBu
+bkfbmkFpayPOyQW8CwHs7jUxIN1NOkEa1llLGA7bsYX7KbTd4GiuiUuVbxhyzTMwuiwGpFX5lkLU
+dFjJ+55Mw5yGGpsRtX6Kk2Ue9jWewtBRx9eRJTEg7XnWF+TBo25SzUmo3inINLjIKoPD1QXsbNvN
+6fxr9Az5xIDm9kOm5gLce+xEW/aF1BYlCmshSr2PMxm32HV3B8ez0/jQPycG1NklTMxsUGUaQaMD
+lc7EIcse4vXJJF18xX7FVUpq6njd5xUDKVeKcE2v4xib52bxIAdza9mbf4CE9OscUZo5q3nO295p
+zD0zYuBcegHOCb+8KpvDi6G5hRMX8klIKaei6b083PdjCdNHjxhQqO/gcPsj77CB27PO2OQa9j+r
+8tq+/VyODC/yaXBxeyBRlUPv8Dzt3eO86PrNs85Rml7+ot7soLrVTqVpsypMTjGQcD5L/vC/tTkV
+F/cXNG0rDkAnVtkAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
+</repository>

@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{3B9D8848-C302-4E77-92C6-531F920B6FE3}</ProjectGuid>
+    <TargetFrameworkProfile />
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>YosuvaCom</RootNamespace>
+    <AssemblyName>YosuvaCom</AssemblyName>
+    <NoWarn>1591</NoWarn>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RANOREX_BIN_PATH Condition=" '$(RANOREX_BIN_PATH)' == '' ">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Ranorex\Studio', 'InstallDir', null, RegistryView.Registry64, RegistryView.Registry32))\Bin</RANOREX_BIN_PATH>
+    <RanorexTargetsPath>$(RANOREX_BIN_PATH)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
+    <projectdefaultrepository>6e7d99f8-9ab1-407c-8805-c642cfc4983e</projectdefaultrepository>
+    <StartAction>Project</StartAction>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Bootstrapper">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core.Resolver">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Cef">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.ChromeWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Delphi">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.FirefoxWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Flex">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Java">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Mobile">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Msaa">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Office">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Qt">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.RawText">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Sap">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Uia">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WebDriver">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Win32">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.ReportToPDF">
+      <HintPath>..\packages\Ranorex.ReportToPDF.1.0.16\lib\net40\Ranorex.ReportToPDF.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <id>23d9db4e-5260-470a-b4c7-0101e59f31d7</id>
+    </Compile>
+    <Compile Include="BusinessModules\CloseBrowser.cs">
+      <DependentUpon>CloseBrowser.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>3bc5b646-9fda-42da-a0f0-b89ee59e9de7</id>
+      <BoundTo>9d2f2fc6-eb45-46d1-85fd-622a3c2fd8eb</BoundTo>
+    </Compile>
+    <Compile Include="BusinessModules\CloseBrowser.UserCode.cs">
+      <DependentUpon>CloseBrowser.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b8b26f46-44b2-4e4d-84bc-5c4c77658313</id>
+      <BoundTo>9d2f2fc6-eb45-46d1-85fd-622a3c2fd8eb</BoundTo>
+    </Compile>
+    <Compile Include="BusinessModules\Custom\CloseWebsiteWithCustomAction.cs">
+      <BoundTo>ec86e756-9723-40ca-8f52-81246c878410</BoundTo>
+      <DependentUpon>CloseWebsiteWithCustomAction.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>bd45928d-da1b-4400-a6b6-8192eb0e7171</id>
+    </Compile>
+    <Compile Include="BusinessModules\Custom\CloseWebsiteWithCustomAction.UserCode.cs">
+      <BoundTo>ec86e756-9723-40ca-8f52-81246c878410</BoundTo>
+      <DependentUpon>CloseWebsiteWithCustomAction.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>af34629f-c476-4f02-b513-25d874670c50</id>
+    </Compile>
+    <Compile Include="BusinessModules\Custom\LaunchWebsiteWithCustomAction.cs">
+      <BoundTo>5ec3337e-14b4-4628-986e-c48cce83be92</BoundTo>
+      <DependentUpon>LaunchWebsiteWithCustomAction.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>f00672c1-77fc-472c-b00d-cc39c22c9c7a</id>
+    </Compile>
+    <Compile Include="BusinessModules\Custom\LaunchWebsiteWithCustomAction.UserCode.cs">
+      <BoundTo>5ec3337e-14b4-4628-986e-c48cce83be92</BoundTo>
+      <DependentUpon>LaunchWebsiteWithCustomAction.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>8701b7bb-9ade-4a6f-9277-a87f71e4c956</id>
+    </Compile>
+    <Compile Include="BusinessModules\Custom\LoginWithCustomAction.cs">
+      <BoundTo>1db19d2b-8cb6-47ac-8bd5-d5ba0e915c63</BoundTo>
+      <DependentUpon>LoginWithCustomAction.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>f2bc0f28-8cfe-4a63-95f4-94250061e3e9</id>
+    </Compile>
+    <Compile Include="BusinessModules\Custom\LoginWithCustomAction.UserCode.cs">
+      <BoundTo>1db19d2b-8cb6-47ac-8bd5-d5ba0e915c63</BoundTo>
+      <DependentUpon>LoginWithCustomAction.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>964c3019-175b-4bcb-b4e1-c6c53ec52071</id>
+    </Compile>
+    <Compile Include="BusinessModules\Custom\ValidateWithCustomAction.cs">
+      <BoundTo>74312517-03da-41f1-b6cf-8dd0f8952e2b</BoundTo>
+      <DependentUpon>ValidateWithCustomAction.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c79a91da-4b05-42f5-9de7-6a12a10e14e1</id>
+    </Compile>
+    <Compile Include="BusinessModules\Custom\ValidateWithCustomAction.UserCode.cs">
+      <BoundTo>74312517-03da-41f1-b6cf-8dd0f8952e2b</BoundTo>
+      <DependentUpon>ValidateWithCustomAction.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ca38f40f-676a-4bd2-a71e-c0dc22e31619</id>
+    </Compile>
+    <Compile Include="BusinessModules\LoginExcelData.cs">
+      <DependentUpon>LoginExcelData.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>bedf43a9-22fc-4fa3-a7a2-5b578a6b7f1b</id>
+      <BoundTo>9b14afd4-6e23-4c57-b679-36ffa88fc8e2</BoundTo>
+    </Compile>
+    <Compile Include="BusinessModules\LoginExcelData.UserCode.cs">
+      <DependentUpon>LoginExcelData.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>542b9aee-3e48-48fa-bc45-c1cd046dfe4a</id>
+      <BoundTo>9b14afd4-6e23-4c57-b679-36ffa88fc8e2</BoundTo>
+    </Compile>
+    <Compile Include="BusinessModules\LoginSimpleData.cs">
+      <DependentUpon>LoginSimpleData.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>0b53b243-2cb2-4252-b8ac-d303e6f5bee4</id>
+      <BoundTo>2e29af60-ca90-45d8-a70a-dd9324cdd2e6</BoundTo>
+    </Compile>
+    <Compile Include="BusinessModules\LoginSimpleData.UserCode.cs">
+      <DependentUpon>LoginSimpleData.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>760d592a-c9a6-4d22-a1ae-62c6f5834ab6</id>
+      <BoundTo>2e29af60-ca90-45d8-a70a-dd9324cdd2e6</BoundTo>
+    </Compile>
+    <Compile Include="BusinessModules\OpenBrowser.cs">
+      <DependentUpon>OpenBrowser.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a405a504-d320-4ea0-ac21-9055bb56632b</id>
+      <BoundTo>1db60985-1294-443c-a430-2babc0db21ff</BoundTo>
+    </Compile>
+    <Compile Include="BusinessModules\OpenBrowser.UserCode.cs">
+      <DependentUpon>OpenBrowser.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>613990fb-5eca-4d5f-950b-2d5021a3e243</id>
+      <BoundTo>1db60985-1294-443c-a430-2babc0db21ff</BoundTo>
+    </Compile>
+    <Compile Include="BusinessModules\ValidateHome.cs">
+      <DependentUpon>ValidateHome.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>58bbd7e4-0508-4406-83ed-d314e2e41da4</id>
+      <BoundTo>5c9f97d6-6603-4b61-91da-b9cb0651e7e2</BoundTo>
+    </Compile>
+    <Compile Include="BusinessModules\ValidateHome.UserCode.cs">
+      <DependentUpon>ValidateHome.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>7818da64-92fc-4df3-86c5-7869739666e4</id>
+      <BoundTo>5c9f97d6-6603-4b61-91da-b9cb0651e7e2</BoundTo>
+    </Compile>
+    <Compile Include="Framework\Data.cs">
+      <id>5b639953-4bf7-4006-a5ab-123996c0651c</id>
+    </Compile>
+    <Compile Include="Framework\DataTable.cs">
+      <id>53562064-6cbf-409d-80b8-6fa9f0bdb942</id>
+    </Compile>
+    <Compile Include="Framework\RunnerSetup.cs">
+      <id>28b2e1f9-fa4f-4d34-af2b-d9aa4abf03cb</id>
+    </Compile>
+    <Compile Include="Framework\ExcelCellFormatting.cs">
+      <id>51f2f058-a6d2-4373-b334-22bf6eda68e1</id>
+    </Compile>
+    <Compile Include="Framework\ExcelDataAccess.cs">
+      <id>c2ec0f55-4318-4b8e-942b-660fba7a3b48</id>
+    </Compile>
+    <Compile Include="Framework\FrameworkException.cs">
+      <id>2a9cc501-e513-4acb-ba27-3a20ccb0bab4</id>
+    </Compile>
+    <Compile Include="Framework\Actions.cs">
+      <id>121bca31-4f8f-4ded-ae78-3b36c7f559b9</id>
+    </Compile>
+    <Compile Include="Framework\Util.cs">
+      <id>dbe8b4ef-5041-488e-b9ae-222cd8465f0a</id>
+    </Compile>
+    <Compile Include="Modules\CollectRetryErrorMessagesModule.cs">
+      <id>5f37ffd5-5eb1-4ddc-a741-f63893f6d4fd</id>
+    </Compile>
+    <Compile Include="Modules\EmailModule.cs">
+      <id>fc3a1666-f420-4062-8834-38cdc09b0404</id>
+    </Compile>
+    <Compile Include="Modules\ReportToPDFModule.cs">
+      <id>0af5cbc0-ad78-45d7-b275-f8cba9a566b4</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>62108964-d85d-45a8-b80f-eefa1fcdd0ae</id>
+    </Compile>
+    <Compile Include="Helpers\DragNDropLibrary.cs">
+      <id>666887a0-05b5-4ed4-9b5b-43644c55ecc7</id>
+    </Compile>
+    <Compile Include="Helpers\EmailLibrary.cs">
+      <id>998b0012-e6fd-43e0-af25-0bfdec061173</id>
+    </Compile>
+    <Compile Include="Helpers\ExceptionExtensions.cs">
+      <id>ef39f18f-1157-4aee-ae6b-d1e984cd356c</id>
+    </Compile>
+    <Compile Include="Helpers\FileLibrary.cs">
+      <id>e5c819a8-2dda-4407-b216-d1fc17c959c7</id>
+    </Compile>
+    <Compile Include="Helpers\PopupWatcherLibrary.cs">
+      <id>20a0666f-baab-4c0f-b6b7-c78ad526fea9</id>
+    </Compile>
+    <Compile Include="Helpers\StringLibrary.cs">
+      <id>6e9063fa-50fb-4adc-96f5-355823dca012</id>
+    </Compile>
+    <Compile Include="Helpers\SystemLibrary.cs">
+      <id>bfe7bd38-2a75-4605-96bd-172b59d3c439</id>
+    </Compile>
+    <Compile Include="Helpers\Utils.cs">
+      <id>5ad0e16b-cc55-42f6-8ea7-693fd8da9fe7</id>
+    </Compile>
+    <Compile Include="Helpers\ValidationLibrary.cs">
+      <id>78b68eea-ced1-4d2c-bad2-4ea0b64855d6</id>
+    </Compile>
+    <Compile Include="Helpers\WebLibrary.cs">
+      <id>4b4039a3-4090-4b21-baef-fd797bd30f4f</id>
+    </Compile>
+    <Compile Include="YosuvaComRepository.cs">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <DependentUpon>YosuvaComRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>b8ede091-d282-41cc-9a1d-656fb18dc1be</id>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <id>acae8c4e-5771-4904-b091-4f6fdae01a92</id>
+    </None>
+    <None Include="BusinessModules\CloseBrowser.rxrec">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <id>9d2f2fc6-eb45-46d1-85fd-622a3c2fd8eb</id>
+      <recordtableid>13a139fd-401a-4947-a6c0-d298b0e02e41</recordtableid>
+    </None>
+    <None Include="BusinessModules\Custom\CloseWebsiteWithCustomAction.rxrec">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <id>ec86e756-9723-40ca-8f52-81246c878410</id>
+      <recordtableid>8fafbd77-688c-41a3-afa7-9ea30df8bb5d</recordtableid>
+    </None>
+    <None Include="BusinessModules\Custom\LaunchWebsiteWithCustomAction.rxrec">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <id>5ec3337e-14b4-4628-986e-c48cce83be92</id>
+      <recordtableid>ef2ade1b-24c2-4807-8156-47524d964d80</recordtableid>
+    </None>
+    <None Include="BusinessModules\Custom\LoginWithCustomAction.rxrec">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <id>1db19d2b-8cb6-47ac-8bd5-d5ba0e915c63</id>
+      <recordtableid>66ab641c-63cb-4d46-9c23-d1fed84e9889</recordtableid>
+    </None>
+    <None Include="BusinessModules\Custom\ValidateWithCustomAction.rxrec">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <id>74312517-03da-41f1-b6cf-8dd0f8952e2b</id>
+      <recordtableid>fb5f3775-d7d4-43c2-ad76-2e800f03038e</recordtableid>
+    </None>
+    <None Include="BusinessModules\LoginExcelData.rxrec">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <id>9b14afd4-6e23-4c57-b679-36ffa88fc8e2</id>
+      <recordtableid>429496fb-6add-439f-aaea-958d12db14e8</recordtableid>
+    </None>
+    <None Include="BusinessModules\LoginSimpleData.rxrec">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <id>2e29af60-ca90-45d8-a70a-dd9324cdd2e6</id>
+      <recordtableid>0bdcba98-7125-407d-9fca-514d6898d223</recordtableid>
+    </None>
+    <None Include="BusinessModules\OpenBrowser.rxrec">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <id>1db60985-1294-443c-a430-2babc0db21ff</id>
+      <recordtableid>a4dbd0c1-e575-4cb3-bc88-15d715704cd6</recordtableid>
+    </None>
+    <None Include="BusinessModules\ValidateHome.rxrec">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <id>5c9f97d6-6603-4b61-91da-b9cb0651e7e2</id>
+      <recordtableid>f7f31765-e6a9-4c8d-8f90-8f52cc0f92c9</recordtableid>
+    </None>
+    <None Include="CustomReport\frogconsulting.png">
+      <id>7997dd60-d506-4295-b9df-1288354902be</id>
+    </None>
+    <None Include="CustomReport\RanorexReport.css">
+      <id>472a6f86-a139-4849-8913-ac7efb90d931</id>
+    </None>
+    <None Include="CustomReport\RanorexReport.png">
+      <id>333428a6-a407-4850-b0d0-fc4ae53c3420</id>
+    </None>
+    <None Include="CustomReport\RanorexReport.xsl">
+      <id>eaa5479f-cea4-40fa-b4c7-e95c135b2c16</id>
+    </None>
+    <None Include="CustomReport\style.xml">
+      <id>37d70adf-cb79-4b06-a859-ebe5039a782c</id>
+    </None>
+    <None Include="CustomReport\View.rxlog">
+      <id>7ee491a4-2cbd-431c-a89d-9e8bb347a129</id>
+    </None>
+    <None Include="CustomReport\View.rxlog.data">
+      <id>ca9ab2e9-a88b-41d2-824d-c1cde5e68d92</id>
+    </None>
+    <None Include="packages.config">
+      <id>09b3c9b8-6d5e-4216-ab42-7abb6c11078f</id>
+    </None>
+    <None Include="Runner.xlsx">
+      <id>44367ae9-c9a5-467e-a185-0d0c5ae300a1</id>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\YosuvaCom.xlsx">
+      <id>4f5fa0c6-ad0b-4a7d-9c93-954e6cb9b8af</id>
+    </None>
+    <None Include="YosuvaComRepository.rximg">
+      <BoundTo>6e7d99f8-9ab1-407c-8805-c642cfc4983e</BoundTo>
+      <DependentUpon>YosuvaComRepository.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>47d8087b-7741-42c7-b20a-97058ab1857f</id>
+    </None>
+    <None Include="YosuvaComRepository.rxrep">
+      <id>6e7d99f8-9ab1-407c-8805-c642cfc4983e</id>
+      <repoid>9aaf6914-2d20-4b0c-96b2-28a413c04ba7</repoid>
+      <reporootid>3990b755-f4de-48a6-807b-46224209af53</reporootid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="YosuvaCom.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>2f5bf33b-28e7-4783-aeaf-46e8b0e6bfa1</id>
+    </Content>
+    <Content Include="YosuvaCom.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>149de120-4ada-4fc3-8f15-738f21357746</id>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BusinessModules\Custom">
+      <id>a170c5c8-2095-482c-9369-94c51d4746a9</id>
+    </Folder>
+    <Folder Include="Framework">
+      <id>79faff53-3c23-48c4-ba2f-10c197c6b457</id>
+    </Folder>
+    <Folder Include="BusinessModules">
+      <id>5d78266c-dad1-4c54-81fb-7906a73ff614</id>
+    </Folder>
+    <Folder Include="CustomReport">
+      <id>897872b3-1e08-496d-8475-46ee86695b2d</id>
+    </Folder>
+    <Folder Include="TestData">
+      <id>e5153b05-a8f7-4743-b36f-ad318576d6fa</id>
+    </Folder>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />
+</Project>

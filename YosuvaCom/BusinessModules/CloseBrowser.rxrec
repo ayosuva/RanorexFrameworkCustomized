@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="13a139fd-401a-4947-a6c0-d298b0e02e41"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="CloseBrowser"
+	namespace="YosuvaCom.BusinessModules">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<closeapprecorditem
+		enabled="True"
+		graceperiod="0ms"
+		method="CloseWindow"
+		optional="False"
+		searchpropertyid="a70db412-968a-472b-be9a-cb50ecbf831f">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="7a09804a-447b-47c8-a1bc-5ff78f4728ca"
+			sourcename="RepositoryEditor">
+				<path>
+					/form[@processname='chrome']
+				</path>
+				<robustPath>
+				</robustPath>
+			</info>
+		</closeapprecorditem>
+	</recorditems>
+	<repository
+	id="9aaf6914-2d20-4b0c-96b2-28a413c04ba7"
+	name="YosuvaComRepository"
+	relativepath="..\YosuvaComRepository.rxrep">
+		<codegen
+		classname="YosuvaComRepository"
+		namespace="YosuvaCom">
+		</codegen>
+		<rootfolder
+		id="3990b755-f4de-48a6-807b-46224209af53"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		CloseBrowser.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

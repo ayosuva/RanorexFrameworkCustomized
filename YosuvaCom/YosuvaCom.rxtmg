@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc>
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="YosuvaCom"
+      id="981bac7b-a315-496d-9cb6-262db4f16496"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="YosuvaCom"
+      id="981bac7b-a315-496d-9cb6-262db4f16496"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>

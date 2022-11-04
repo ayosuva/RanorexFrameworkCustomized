@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="8fafbd77-688c-41a3-afa7-9ea30df8bb5d"
+mode="Global">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="CloseWebsiteWithCustomAction"
+	namespace="YosuvaCom.BusinessModules.Custom">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<userrecorditem
+		classname="Actions"
+		enabled="True"
+		isexternaltestmethod="True"
+		methodname="CloseApplication"
+		namespace="Framework"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<arguments
+			id="7db49ee0-4dd5-45b7-adbb-48006f42eed7">
+				<argument
+				argname="repoItem"
+				id="ddff26e2-5187-4e33-90a6-7bb489ec50ca">
+					<argvaluetype>
+						Ranorex.Core.Repository.RepoItemInfo, Ranorex.Core, Culture=neutral
+					</argvaluetype>
+					<argvalue>
+					</argvalue>
+					<info
+					id="7a09804a-447b-47c8-a1bc-5ff78f4728ca"
+					sourcename="RepositoryEditor">
+						<path>
+							/dom[@domain='yosuva.com']
+						</path>
+						<robustPath>
+						</robustPath>
+					</info>
+				</argument>
+			</arguments>
+		</userrecorditem>
+	</recorditems>
+	<repository
+	id="9aaf6914-2d20-4b0c-96b2-28a413c04ba7"
+	name="YosuvaComRepository"
+	relativepath="..\..\YosuvaComRepository.rxrep">
+		<codegen
+		classname="YosuvaComRepository"
+		namespace="YosuvaCom">
+		</codegen>
+		<rootfolder
+		id="3990b755-f4de-48a6-807b-46224209af53"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		CloseWebsiteWithCustomAction.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

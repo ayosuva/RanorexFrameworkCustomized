@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="a4dbd0c1-e575-4cb3-bc88-15d715704cd6"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="OpenBrowser"
+	namespace="YosuvaCom.BusinessModules">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<openwebsiterecorditem
+		args=""
+		browser="Chrome"
+		clearcache="False"
+		clearcodecache="False"
+		clearcookies="False"
+		clearserviceworker="False"
+		enabled="True"
+		incognito="False"
+		instrument="True"
+		killexisting="False"
+		maximized="True"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<url>
+				https://yosuva.com/TestLogin.html
+			</url>
+		</openwebsiterecorditem>
+	</recorditems>
+	<repository
+	id="9aaf6914-2d20-4b0c-96b2-28a413c04ba7"
+	name="YosuvaComRepository"
+	relativepath="..\YosuvaComRepository.rxrep">
+		<codegen
+		classname="YosuvaComRepository"
+		namespace="YosuvaCom">
+		</codegen>
+		<rootfolder
+		id="3990b755-f4de-48a6-807b-46224209af53"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		OpenBrowser.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
