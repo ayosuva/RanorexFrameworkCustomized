@@ -39,7 +39,7 @@ namespace Framework
     	public static void Click(RepoItemInfo RepoObject){
     		Ranorex.Adapter itemAdapter=RepoObject.CreateAdapter<Unknown>(true);
     		itemAdapter.Click();
-    		Report.Log(ReportLevel.Info,"Click",RepoObject.Name.Replace("_","")+" Clicked "+RepoObject.Name.Replace("_",""));
+    		Report.Log(ReportLevel.Info,"Click "+RepoObject.Name.Replace("_",""),"Clicked "+RepoObject.Name.Replace("_",""));
     	}
     	
     	[UserCodeMethod]
@@ -47,7 +47,7 @@ namespace Framework
         {
     		Ranorex.Adapter itemAdapter=RepoObject.CreateAdapter<Unknown>(true);
     		itemAdapter.PressKeys (Value);
-    		Report.Log(ReportLevel.Info,"Enter",RepoObject.Name.Replace("_","")+" Entered "+Value+" in "+RepoObject.Name.Replace("_",""));
+    		Report.Log(ReportLevel.Info,"Enter "+RepoObject.Name.Replace("_",""),"Entered "+Value+" in "+RepoObject.Name.Replace("_",""));
 
         }
     	
@@ -63,11 +63,11 @@ namespace Framework
 			}
 			if (actual.Replace("\n","").Equals(expected.Replace("\n","")))
 			{
-				Report.Log(ReportLevel.Success,"Verify "+repoItem.Name.Replace("_",""), "The expected value ''"+expected +"'' equal to actual value "+actual);
+				Report.Log(ReportLevel.Success,"Verify "+repoItem.Name.Replace("_",""), "The expected value ''"+expected +"'' equal to actual value ''"+actual+"''");
 			}
 			else
 			{
-				Report.Log(ReportLevel.Failure,"Verify "+repoItem.Name.Replace("_",""), "The expected value ''"+expected +"'' not equal to actual value "+actual);
+				Report.Log(ReportLevel.Failure,"Verify "+repoItem.Name.Replace("_",""), "The expected value ''"+expected +"'' not equal to actual value ''"+actual+"''");
 			}
 
 		}
@@ -76,7 +76,7 @@ namespace Framework
 		public static void CloseApplication(RepoItemInfo repoItem)
         {
 			Host.Current.CloseApplication(repoItem.FindAdapter<WebDocument>(), new Duration(0));
-            Report.Log(ReportLevel.Info, "Application", "Closed application  "+repoItem.Name.Replace("_",""), repoItem);
+            Report.Log(ReportLevel.Info, "Close Application", "Closed application");
 
         }
     }

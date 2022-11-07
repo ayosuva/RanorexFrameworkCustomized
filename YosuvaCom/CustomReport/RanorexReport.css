@@ -102,7 +102,7 @@ a:hover {
 div#page {
     text-align: left;
     margin: 0 auto;
-    width: 1400px;
+    width: 1280px; /*it was 950px;*/
     padding: 0;
     background-color: #fff;
     border: 0px solid #ccc;

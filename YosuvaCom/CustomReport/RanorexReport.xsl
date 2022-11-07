@@ -151,10 +151,10 @@
                                 <b>Level</b>
                               </th>
                               <th>
-                                <b>Category</b>
+                                <b>Expected</b>
                               </th>
                               <th>
-                                <b>Message</b>
+                                <b>Actual</b>
                               </th>
                             </thead>
 
@@ -214,10 +214,10 @@
                                 <b>Level</b>
                               </th>
                               <th>
-                                <b>Category</b>
+                                <b>Expected</b>
                               </th>
                               <th>
-                                <b>Message</b>
+                                <b>Actual</b>
                               </th>
                             </thead>
 
@@ -252,10 +252,10 @@
                               <b>Level</b>
                             </th>
                             <th>
-                              <b>Category</b>
+                              <b>Expected</b>
                             </th>
                             <th>
-                              <b>Message</b>
+                              <b>Actual</b>
                             </th>
                           </thead>
                           <tbody>
@@ -310,10 +310,10 @@
                             <b>Level</b>
                           </th>
                           <th>
-                            <b>Category</b>
+                            <b>Expected</b>
                           </th>
                           <th>
-                            <b>Message</b>
+                            <b>Expected</b>
                           </th>
                         </tr>
                       </thead>
@@ -609,10 +609,10 @@
                     <b>Level</b>
                   </th>
                   <th>
-                    <b>Category</b>
+                    <b>Expected</b>
                   </th>
                   <th>
-                    <b>Message</b>
+                    <b>Actual</b>
                   </th>
                 </thead>
 
