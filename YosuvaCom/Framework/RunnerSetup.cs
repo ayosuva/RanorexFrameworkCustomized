@@ -61,8 +61,8 @@ namespace Framework
             
             for (int currentTestInstance = 1; currentTestInstance <= nTestInstances; currentTestInstance++)
             {
-                string executeFlag = runManagerAccess.GetValue(currentTestInstance, "Execute");
-                string tc_id=runManagerAccess.GetValue(currentTestInstance,"Test_Name");
+                string executeFlag = runManagerAccess.GetValue(currentTestInstance, "Ranorex");
+                string tc_id=runManagerAccess.GetValue(currentTestInstance,"Test_ID");
                 if (executeFlag.Equals("Yes", StringComparison.InvariantCultureIgnoreCase))
                 {
                 	Boolean statebefore=TestSuite.Current.GetTestContainer(tc_id).Checked;

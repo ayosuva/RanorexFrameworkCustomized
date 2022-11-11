@@ -415,6 +415,9 @@
     <None Include="packages.config">
       <id>09b3c9b8-6d5e-4216-ab42-7abb6c11078f</id>
     </None>
+    <None Include="RanorexExecutor.xlsm">
+      <id>f0b383c9-b7ea-4ecb-b1d2-bcd43079d082</id>
+    </None>
     <None Include="Runner.xlsx">
       <id>44367ae9-c9a5-467e-a185-0d0c5ae300a1</id>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
