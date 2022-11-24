@@ -66,7 +66,7 @@ namespace Framework
       FileStream out1;
       try
       {
-        out1 = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+        out1 = new FileStream(path, FileMode.Create, FileAccess.Write,FileShare.ReadWrite);
       }
       catch (FileNotFoundException ex)
       {
@@ -227,7 +227,7 @@ namespace Framework
     {
       this.CheckPreRequisites();
       XSSFWorkbook workbook = this.OpenFileForReading();
-      XSSFCell cell = (XSSFCell) ((XSSFRow) this.GetWorkSheet(workbook).GetRow(rowNum)).CreateCell(columnNum);
+      XSSFCell cell = (XSSFCell) ((XSSFRow) this.GetWorkSheet(workbook).GetRow(rowNum)).GetCell(columnNum);
       cell.SetCellType(CellType.String);
       cell.SetCellValue(value);
       if (cellFormatting != null)
@@ -262,7 +262,7 @@ namespace Framework
       }
       if (column == -1)
         throw new FrameworkException("The specified column header " + columnHeader + " is not found in the sheet \"" + this.DatasheetName + "\"!");
-      XSSFCell cell = (XSSFCell) ((XSSFRow) workSheet.GetRow(rowNum)).CreateCell(column);
+      XSSFCell cell = (XSSFCell) ((XSSFRow) workSheet.GetRow(rowNum)).GetCell(column);
       cell.SetCellType(CellType.String);
       cell.SetCellValue(value);
       if (cellFormatting != null)
