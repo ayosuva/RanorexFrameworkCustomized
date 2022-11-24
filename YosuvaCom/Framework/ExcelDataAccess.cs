@@ -51,6 +51,8 @@ namespace Framework
       try
       {
         xssfWorkbook = new XSSFWorkbook((Stream) s);
+        HSSFFormulaEvaluator.EvaluateAllFormulaCells(xssfWorkbook);
+
       }
       catch (Exception ex)
       {
