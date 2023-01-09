@@ -51,8 +51,7 @@ namespace Framework
       try
       {
         xssfWorkbook = new XSSFWorkbook((Stream) s);
-        HSSFFormulaEvaluator.EvaluateAllFormulaCells(xssfWorkbook);
-
+        XSSFFormulaEvaluator.EvaluateAllFormulaCells(xssfWorkbook);
       }
       catch (Exception ex)
       {
@@ -240,7 +239,9 @@ namespace Framework
       this.WriteIntoFile(workbook);
     }
 
-    public void SetValue(int rowNum, string columnHeader, string value) { this.SetValue(rowNum, columnHeader, value, (ExcelCellFormatting) null);}
+    public void SetValue(int rowNum, string columnHeader, string value) {
+      this.SetValue(rowNum, columnHeader, value, (ExcelCellFormatting) null);
+    }
 
     public void SetValue(
       int rowNum,
@@ -264,7 +265,7 @@ namespace Framework
       }
       if (column == -1)
         throw new FrameworkException("The specified column header " + columnHeader + " is not found in the sheet \"" + this.DatasheetName + "\"!");
-      XSSFCell cell = (XSSFCell) ((XSSFRow) workSheet.GetRow(rowNum)).GetCell(column);
+      XSSFCell cell = (XSSFCell) ((XSSFRow) workSheet.GetRow(rowNum)).CreateCell(column);
       cell.SetCellType(CellType.String);
       cell.SetCellValue(value);
       if (cellFormatting != null)
