@@ -228,7 +228,7 @@ namespace Framework
     {
       this.CheckPreRequisites();
       XSSFWorkbook workbook = this.OpenFileForReading();
-      XSSFCell cell = (XSSFCell) ((XSSFRow) this.GetWorkSheet(workbook).GetRow(rowNum)).GetCell(columnNum);
+      XSSFCell cell = (XSSFCell) ((XSSFRow) this.GetWorkSheet(workbook).GetRow(rowNum)).CreateCell(columnNum);
       cell.SetCellType(CellType.String);
       cell.SetCellValue(value);
       if (cellFormatting != null)
